@@ -17,7 +17,7 @@ export default function Navigation({ onOpenContact }) {
       <nav className="flex items-center justify-between px-6 md:px-8 py-4 w-full max-w-4xl bg-white/70 dark:bg-[#24242c]/70 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative z-50 transition-colors duration-500">
         
         <div className="text-xl md:text-2xl font-semibold tracking-tight text-[#1d1d1f] dark:text-white pl-2 md:pl-0">
-          Huthaifa Maan
+          Huthaifa Ma'in
         </div>
 
         <div className="hidden md:flex space-x-6 lg:space-x-8 text-base font-medium text-[#86868b] dark:text-gray-400 items-center">

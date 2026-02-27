@@ -10,6 +10,7 @@ import ContactFooter from './components/contact/ContactFooter'
 import ContactModal from './components/contact/ContactModal'
 import ImageSlider from './components/ImageSlider'
 import FlutterApiGuide from './components/publications/FlutterApiGuide'
+import ThemeManagerGuide from './components/publications/ThemeManagerGuide'
 
 export default function App() {
   const [activeProject, setActiveProject] = useState(null)
@@ -69,12 +70,13 @@ export default function App() {
         <FadeIn>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#1d1d1f] dark:text-white mb-4 transition-colors duration-300">Publications & Docs.</h2>
-            <p className="text-xl text-[#86868b] dark:text-gray-400 font-medium transition-colors duration-300">Technical guides, blueprints, and engineering standards.</p>
+            <p className="text-xl text-[#86868b] dark:text-gray-400 font-medium transition-colors duration-300">Technical guides, blueprints, and engineering standards I've authored.</p>
           </div>
         </FadeIn>
 
         <div className="space-y-16">
           <FlutterApiGuide />
+          <ThemeManagerGuide />
         </div>
       </section>
 
