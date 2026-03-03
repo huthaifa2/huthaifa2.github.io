@@ -11,6 +11,7 @@ import ContactModal from './components/contact/ContactModal'
 import ImageSlider from './components/ImageSlider'
 import FlutterApiGuide from './components/publications/FlutterApiGuide'
 import ThemeManagerGuide from './components/publications/ThemeManagerGuide'
+import CleanArchitectureGuide from './components/publications/CleanArchitectureGuide'
 
 export default function App() {
   const [activeProject, setActiveProject] = useState(null)
@@ -76,6 +77,7 @@ export default function App() {
 
         <div className="space-y-16">
           <FlutterApiGuide />
+          <CleanArchitectureGuide />
           <ThemeManagerGuide />
         </div>
       </section>
