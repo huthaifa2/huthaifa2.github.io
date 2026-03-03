@@ -7,6 +7,7 @@ export default function FlutterApiGuide() {
         
         <div className="w-full lg:w-3/5 p-6 md:p-12 flex flex-col items-start justify-center relative z-10">
           <div className="flex items-center gap-3 mb-4 md:mb-6">
+             {/* Blue Icon Container */}
              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477-4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -43,7 +44,8 @@ export default function FlutterApiGuide() {
           </a>
         </div>
 
-        <div className="w-full lg:w-2/5 bg-gradient-to-br from-gray-50 to-gray-200/50 dark:from-[#2a2a35] dark:to-[#1e1e26] p-8 md:p-12 flex justify-center items-center relative transition-colors duration-500 min-h-[400px]">
+        {/* Pale Blue to Violet Gradient */}
+        <div className="w-full lg:w-2/5 bg-gradient-to-br from-blue-50 to-violet-200/50 dark:from-[#222436] dark:to-[#1e1c26] p-8 md:p-12 flex justify-center items-center relative transition-colors duration-500 min-h-[400px]">
           <div className="relative w-64 sm:w-72 md:w-80 lg:w-72 xl:w-80 aspect-[1/1.41] transform transition-all duration-500 ease-out z-10 group-hover:-translate-y-3 shadow-[0_20px_60px_rgba(0,0,0,0.1)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.15)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/10">
             <img 
               src="/icons/flutter_api_doc_cover_page.png" 
@@ -51,7 +53,7 @@ export default function FlutterApiGuide() {
               className="w-full h-full object-cover" 
             />
           </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-400/10 dark:bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-400/20 transition-colors duration-500 z-0"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-400/10 dark:bg-indigo-500/10 rounded-full blur-3xl group-hover:bg-indigo-400/20 transition-colors duration-500 z-0"></div>
         </div>
 
       </div>

@@ -7,12 +7,13 @@ export default function ThemeManagerGuide() {
         
         <div className="w-full lg:w-3/5 p-6 md:p-12 flex flex-col items-start justify-center relative z-10">
           <div className="flex items-center gap-3 mb-4 md:mb-6">
-             <span className="flex items-center justify-center w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">
+             {/* Pink Icon Container */}
+             <span className="flex items-center justify-center w-10 h-10 rounded-full bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                 </svg>
              </span>
-             <span className="text-sm font-semibold text-purple-600 dark:text-purple-400 uppercase tracking-wider">Engineering Blueprint</span>
+             <span className="text-sm font-semibold text-pink-600 dark:text-pink-400 uppercase tracking-wider">Engineering Blueprint</span>
           </div>
           
           <h3 className="text-2xl md:text-4xl font-bold text-[#1d1d1f] dark:text-white mb-4 tracking-tight transition-colors duration-500">
@@ -43,7 +44,8 @@ export default function ThemeManagerGuide() {
           </a>
         </div>
 
-        <div className="w-full lg:w-2/5 bg-gradient-to-br from-purple-50 to-purple-200/50 dark:from-[#2d2a35] dark:to-[#221e26] p-8 md:p-12 flex justify-center items-center relative transition-colors duration-500 min-h-[400px]">
+        {/* Pale Pink to Rose Gradient */}
+        <div className="w-full lg:w-2/5 bg-gradient-to-br from-pink-50 to-rose-200/50 dark:from-[#32262b] dark:to-[#261e22] p-8 md:p-12 flex justify-center items-center relative transition-colors duration-500 min-h-[400px]">
           <div className="relative w-64 sm:w-72 md:w-80 lg:w-72 xl:w-80 aspect-[1/1.41] transform transition-all duration-500 ease-out z-10 group-hover:-translate-y-3 shadow-[0_20px_60px_rgba(0,0,0,0.1)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.15)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/10">
             <img 
               src="/icons/flutter_theme_manager_doc_cover_page.png" 
@@ -51,7 +53,7 @@ export default function ThemeManagerGuide() {
               className="w-full h-full object-cover" 
             />
           </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-400/10 dark:bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-400/20 transition-colors duration-500 z-0"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-400/10 dark:bg-pink-500/10 rounded-full blur-3xl group-hover:bg-pink-400/20 transition-colors duration-500 z-0"></div>
         </div>
 
       </div>
