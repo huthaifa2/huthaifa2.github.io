@@ -1,5 +1,5 @@
 import FadeIn from './FadeIn'
-import profilePic from '../assets/huthaifa.jpg'
+import profilePic from '../assets/huthaifa.png'
 
 export default function Hero() {
   return (
