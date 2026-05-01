@@ -2,6 +2,10 @@ import FadeIn from '../FadeIn'
 
 export default function Tools() {
   const tools = [
+    { name: 'Figma', icon: '/icons/figma.png' },
+    { name: 'Adobe Photoshop', icon: '/icons/photoshop.png' },
+    { name: 'Adobe Illustrator', icon: '/icons/illustrator.png' },
+    { name: 'Adobe After Effects', icon: '/icons/after_effects.png' },
     { name: 'Flutter', icon: '/icons/flutter.png' },
     { name: 'Dart', icon: '/icons/dart.png' },
     { name: 'Clean Architecture', icon: '/icons/clean_arch.png' },
@@ -11,8 +15,8 @@ export default function Tools() {
     { name: 'Xcode', icon: '/icons/xcode.png' },
     { name: 'Android Studio', icon: '/icons/android_studio.png' },
     { name: 'VS Code', icon: '/icons/vscode.png' },
-    { name: 'Figma', icon: '/icons/figma.png' },
-    { name: 'Git & GitHub', icon: '/icons/github.png' }
+    { name: 'Git & GitHub', icon: '/icons/github.png' },
+    
   ]
 
   return (

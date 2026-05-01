@@ -28,7 +28,7 @@ export default function ContactModal({ onClose }) {
               
               <div>
                 <p className="text-sm text-[#86868b] dark:text-gray-400 font-medium mb-1 transition-colors duration-500">{contact.label}</p>
-                <p className="text-[#1d1d1f] dark:text-gray-200 font-semibold md:text-lg break-all transition-colors duration-500">{contact.value}</p>
+                <p className="text-[#1d1d1f] dark:text-gray-200 font-semibold text-sm break-all transition-colors duration-500">{contact.value}</p>
               </div>
 
             </a>

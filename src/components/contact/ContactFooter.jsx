@@ -16,7 +16,7 @@ export default function ContactFooter() {
                   {contact.icon}
                 </div>
                 <p className="text-sm text-[#86868b] dark:text-gray-400 font-medium mb-2 transition-colors duration-500">{contact.label}</p>
-                <p className="text-[#1d1d1f] dark:text-gray-200 font-semibold text-sm break-all transition-colors duration-500">{contact.value}</p>
+                <p className="text-[#1d1d1f] dark:text-gray-200 font-semibold text-[0.9rem] break-all transition-colors duration-500">{contact.value}</p>
               </a>
             </FadeIn>
           ))}
