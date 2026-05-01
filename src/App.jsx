@@ -211,7 +211,7 @@ export default function App() {
         <FadeIn>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#1d1d1f] dark:text-white mb-4 transition-colors duration-300">Things I Learned & Documented.</h2>
-            <p className="text-xl text-[#86868b] dark:text-gray-400 font-medium transition-colors duration-300">Guides I put together while diving deep into these topics — written to help my team, and anyone else who might find them useful.</p>
+            <p className="text-xl text-[#86868b] dark:text-gray-400 font-medium transition-colors duration-300">Guides I put together while diving deep into these topics, written to help my team, and anyone else who might find them useful.</p>
           </div>
         </FadeIn>
 
