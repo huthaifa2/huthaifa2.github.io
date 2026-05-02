@@ -1,7 +1,6 @@
 export default function WorkersDay({ onOpen }) {
   return (
     <div className="w-full bg-gradient-to-br from-white/90 to-white/60 dark:from-[#24242c]/90 dark:to-[#1a1a28]/80 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.06)] overflow-hidden transition-colors duration-500">
-
       <div className="w-full aspect-video bg-black overflow-hidden rounded-t-[2.5rem] relative group cursor-pointer" onClick={onOpen}>
         <img
           src="/images/graphic/workers_day.png"
@@ -21,15 +20,33 @@ export default function WorkersDay({ onOpen }) {
         <h3 className="text-2xl md:text-4xl font-bold tracking-tight text-[#1d1d1f] dark:text-white mb-6 transition-colors duration-500">
           International Workers Day
         </h3>
-        <div className="flex flex-wrap gap-2">
+        
+        <div className="flex flex-wrap gap-2 mb-6">
           {['Adobe Photoshop'].map((tool, i) => (
             <span key={i} className="px-4 py-1.5 bg-gray-100 dark:bg-white/10 text-[#1d1d1f] dark:text-white rounded-full text-sm font-semibold border border-gray-200 dark:border-white/5 transition-colors duration-500">
               {tool}
             </span>
           ))}
         </div>
-      </div>
 
+        <div className="flex items-center flex-wrap gap-2">
+          <span className="text-sm font-medium text-[#86868b] dark:text-gray-400">In collaboration with:</span>
+          <a
+            href="https://www.linkedin.com/in/sara-alhnaity-189b05291/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 rounded-full border border-gray-200 dark:border-white/10 transition-all duration-300 group"
+          >
+            <div className="w-6 h-6 rounded-full bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-bold">
+              SA
+            </div>
+            <span className="text-sm font-semibold text-[#1d1d1f] dark:text-white">Sara Alhnaity</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-3 h-3 text-[#86868b] group-hover:text-[#1d1d1f] dark:group-hover:text-white transition-colors">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
   )
 }
