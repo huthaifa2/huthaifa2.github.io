@@ -33,24 +33,6 @@ export default function AnimatedPolarisLogo() {
             </span>
           ))}
         </div>
-
-        <div className="flex items-center flex-wrap gap-2">
-          <span className="text-sm font-medium text-[#86868b] dark:text-gray-400">In collaboration with:</span>
-          <a
-            href="https://www.linkedin.com/in/sara-alhnaity-189b05291/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 rounded-full border border-gray-200 dark:border-white/10 transition-all duration-300 group"
-          >
-            <div className="w-6 h-6 rounded-full bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-bold">
-              SA
-            </div>
-            <span className="text-sm font-semibold text-[#1d1d1f] dark:text-white">Sara Alhnaity</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-3 h-3 text-[#86868b] group-hover:text-[#1d1d1f] dark:group-hover:text-white transition-colors">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-            </svg>
-          </a>
-        </div>
       </div>
     </div>
   )
