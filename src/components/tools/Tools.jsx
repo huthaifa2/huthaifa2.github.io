@@ -16,15 +16,18 @@ export default function Tools() {
     { name: 'Android Studio', icon: '/icons/android_studio.png' },
     { name: 'VS Code', icon: '/icons/vscode.png' },
     { name: 'Git & GitHub', icon: '/icons/github.png' },
-    
   ]
 
   return (
-    <section id="tools" className="relative z-10 w-full max-w-6xl mx-auto px-6 py-24">
+    <section id="tools" className="relative z-10 w-full max-w-6xl mx-auto px-6 py-24 scroll-mt-32">
       <FadeIn>
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#1d1d1f] dark:text-white mb-4 transition-colors duration-500">Core Technologies.</h2>
-          <p className="text-xl text-[#86868b] dark:text-gray-400 font-medium transition-colors duration-500">The tools and frameworks I use to bring ideas to life.</p>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-[#1d1d1f] dark:text-white mb-6 transition-colors duration-300">
+            Tools of the Trade.
+          </h2>
+          <p className="text-xl md:text-2xl text-[#86868b] dark:text-gray-400 font-medium transition-colors duration-300 max-w-4xl mx-auto">
+            The tools and frameworks I use to bring ideas to life.
+          </p>
         </div>
         
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-12 gap-x-8 max-w-5xl mx-auto">

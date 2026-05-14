@@ -18,19 +18,21 @@ export default function Hero() {
 
       <FadeIn delay={200}>
         <div className="inline-block mb-6 md:mb-8 px-4 py-2 md:px-5 rounded-full bg-white/60 dark:bg-[#24242c]/90 border border-gray-200/50 dark:border-white/10 shadow-sm backdrop-blur-md transition-colors duration-500">
-          <span className="text-sm md:text-base font-medium text-[#86868b] dark:text-gray-300 tracking-wide transition-colors duration-500">Flutter Team Lead · UI/UX Designer · Graphic Designer</span>
+          <span className="text-sm md:text-base font-medium text-[#86868b] dark:text-gray-300 tracking-wide transition-colors duration-500">
+            Graphic Designer · UI/UX Designer · Flutter Developer
+          </span>
         </div>
       </FadeIn>
       
       <FadeIn delay={300}>
         <h1 className="text-5xl md:text-[5.5rem] leading-tight font-bold tracking-tight mb-6 md:mb-8 text-[#1d1d1f] dark:text-white transition-colors duration-500">
-  Flutter Developer, UI/UX <br className="hidden md:block" /> & Graphic Designer.
-</h1>
+          Graphic Designer, UI/UX Designer <br className="hidden md:block" /> & Flutter Developer.
+        </h1>
       </FadeIn>
       
       <FadeIn delay={400}>
         <p className="text-lg md:text-3xl text-[#86868b] dark:text-gray-400 max-w-4xl leading-relaxed font-medium transition-colors duration-500">
-          I turn Figma designs into high-performance iOS and Android apps using Flutter, Clean Architecture, and BLoC/Cubit. Beyond code, I design full UI/UX systems, produce motion graphics, and lead teams to ship better products.
+          I produce compelling visual narratives and motion graphics using Adobe After Effects, Illustrator, Photoshop, and Premiere Pro. I also design intuitive UI/UX systems in Figma, and bring them to life as high-performance iOS and Android apps using Flutter.
         </p>
       </FadeIn>
     </main>

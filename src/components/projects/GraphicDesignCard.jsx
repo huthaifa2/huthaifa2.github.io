@@ -1,26 +1,45 @@
 import { useState } from 'react'
-import { createPortal } from 'react-dom' // 1. Import createPortal
+import { createPortal } from 'react-dom'
 import FadeIn from '../FadeIn'
 import JustLookUp from './graphic/JustLookUp'
 import AnimatedPolarisLogo from './graphic/AnimatedPolarisLogo'
+import IndependenceDay from './graphic/IndependenceDay'
 import WorkersDay from './graphic/WorkersDay'
 import Internship from './graphic/Internship'
 
 export default function GraphicDesignCard() {
   const [expanded, setExpanded] = useState(false)
-  const [modalSrc, setModalSrc] = useState(null)
+  const [modalImages, setModalImages] = useState(null)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-  // 2. Wrap your modal block in createPortal
+  const openModal = (images) => {
+    setModalImages(images)
+    setCurrentImageIndex(0)
+  }
+
+  const closeModal = () => {
+    setModalImages(null)
+  }
+
+  const handleNext = (e) => {
+    e.stopPropagation()
+    setCurrentImageIndex((prev) => (prev + 1) % modalImages.length)
+  }
+
+  const handlePrev = (e) => {
+    e.stopPropagation()
+    setCurrentImageIndex((prev) => (prev - 1 + modalImages.length) % modalImages.length)
+  }
+
   return (
     <>
-      {/* Image Overlay Modal using Portal */}
-      {modalSrc && createPortal(
+      {modalImages && createPortal(
         <div
           className="fixed inset-0 z-[200] flex items-center justify-center backdrop-blur-2xl"
-          onClick={() => setModalSrc(null)}
+          onClick={closeModal}
         >
           <button
-            onClick={() => setModalSrc(null)}
+            onClick={closeModal}
             className="absolute top-8 right-8 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors p-2 z-10"
             aria-label="Close"
           >
@@ -29,19 +48,39 @@ export default function GraphicDesignCard() {
             </svg>
           </button>
 
-          <div className="w-[85%] max-w-4xl h-[85vh] flex items-center justify-center">
+          {modalImages.length > 1 && (
+            <>
+              <button
+                onClick={handlePrev}
+                className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors p-2 z-10"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+              </button>
+              <button
+                onClick={handleNext}
+                className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors p-2 z-10"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+              </button>
+            </>
+          )}
+
+          <div className="w-[85%] max-w-4xl h-[85vh] flex items-center justify-center relative">
             <img
-              src={modalSrc}
+              src={modalImages[currentImageIndex]}
               alt="Preview"
               className="max-w-full max-h-full object-contain drop-shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             />
           </div>
         </div>,
-        document.body // <-- This tells React to render this outside the parent containers
+        document.body
       )}
 
-      {/* Cards (Leave this part exactly as it was) */}
       <div className="relative">
         <div className={`space-y-8 overflow-hidden transition-all duration-700 ${expanded ? 'max-h-[5000px]' : 'max-h-[650px]'}`}>
           <FadeIn delay={0}>
@@ -51,10 +90,13 @@ export default function GraphicDesignCard() {
             <AnimatedPolarisLogo />
           </FadeIn>
           <FadeIn delay={200}>
-            <WorkersDay onOpen={() => setModalSrc('/images/graphic/workers_day.png')} />
+            <IndependenceDay onOpen={() => openModal(['/images/graphic/independence_day.png', '/images/graphic/independence_day_night.png'])} />
           </FadeIn>
           <FadeIn delay={300}>
-            <Internship onOpen={() => setModalSrc('/images/graphic/internship.png')} />
+            <WorkersDay onOpen={() => openModal(['/images/graphic/workers_day.png'])} />
+          </FadeIn>
+          <FadeIn delay={400}>
+            <Internship onOpen={() => openModal(['/images/graphic/internship.png'])} />
           </FadeIn>
         </div>
 

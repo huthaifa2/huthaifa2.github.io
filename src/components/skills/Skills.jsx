@@ -1,18 +1,18 @@
 import FadeIn from '../FadeIn'
 
 export default function Skills() {
-  const technicalSkills = [
-    'Flutter', 'Dart', 'BLoC', 'Cubit', 'GetIt',
-    'Dio', 'Clean Architecture', 'REST API Integration',
-    'iOS Development', 'Android Development',
-    'Arabic/English Localization', 'Dark/Light Theming',
-  ]
-
   const designSkills = [
     'UI/UX Design', 'Figma', 'Motion Design',
     'Adobe Photoshop', 'Adobe Illustrator',
     'Adobe After Effects', 'Adobe Premiere Pro',
     'Graphic Design', 'Brand & Marketing Design',
+  ]
+
+  const technicalSkills = [
+    'Flutter', 'Dart', 'BLoC', 'Cubit', 'GetIt',
+    'Dio', 'Clean Architecture', 'REST API Integration',
+    'iOS Development', 'Android Development',
+    'Arabic/English Localization', 'Dark/Light Theming',
   ]
 
   const professionalSkills = [
@@ -22,17 +22,21 @@ export default function Skills() {
   ]
 
   const categories = [
-    { title: 'Technical Skills', skills: technicalSkills, delay: 100 },
-    { title: 'Design & Creative', skills: designSkills, delay: 200 },
+    { title: 'Design & Creative', skills: designSkills, delay: 100 },
+    { title: 'Technical Skills', skills: technicalSkills, delay: 200 },
     { title: 'Professional Skills', skills: professionalSkills, delay: 300 },
   ]
 
   return (
-    <section id="skills" className="relative z-10 w-full max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <section id="skills" className="relative z-10 w-full max-w-6xl mx-auto px-6 py-24 scroll-mt-32">
       <FadeIn>
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#1d1d1f] dark:text-white mb-4 transition-colors duration-500">Skills & Expertise.</h2>
-          <p className="text-lg md:text-xl text-[#86868b] dark:text-gray-400 font-medium transition-colors duration-500">A comprehensive overview of my technical capabilities and professional strengths.</p>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-[#1d1d1f] dark:text-white mb-6 transition-colors duration-300">
+            Skills & Expertise.
+          </h2>
+          <p className="text-xl md:text-2xl text-[#86868b] dark:text-gray-400 font-medium transition-colors duration-300 max-w-4xl mx-auto">
+            A comprehensive overview of my technical capabilities and professional strengths.
+          </p>
         </div>
       </FadeIn>
 
