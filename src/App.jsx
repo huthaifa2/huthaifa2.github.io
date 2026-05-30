@@ -2,9 +2,10 @@ import { useState } from 'react'
 import FadeIn from './components/FadeIn'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
+import GraphicDesignCard from './components/projects/GraphicDesignCard'
 import AjeerProject from './components/projects/AjeerProject'
 import PolarisProject from './components/projects/PolarisProject'
-import GraphicDesignCard from './components/projects/GraphicDesignCard'
+import AjeerPrototype from './components/prototypes/AjeerPrototype'
 import Tools from './components/tools/Tools'
 import Skills from './components/skills/Skills'
 import ContactFooter from './components/contact/ContactFooter'
@@ -114,7 +115,9 @@ export default function App() {
     '/images/polaris/polaris11.png', '/images/polaris/polaris12.png'
   ]
 
-  const activeScreenshots = activeProject === 'ajeer' ? ajeerScreenshots : activeProject === 'polaris' ? polarisScreenshots : []
+  const ajeerFigmaScreenshots = [...Array(16).keys()].map(i => `/images/ajeer-figma/img${i}.png`)
+
+  const activeScreenshots = activeProject === 'ajeer' ? ajeerScreenshots : activeProject === 'polaris' ? polarisScreenshots : activeProject === 'ajeer-figma' ? ajeerFigmaScreenshots : []
 
   return (
     <div className="min-h-screen bg-[#f5f5f7] dark:bg-gradient-to-br dark:from-[#1e1e2f] dark:via-[#13131A] dark:to-[#0d0d12] text-[#1d1d1f] dark:text-[#f4f4f5] font-sans selection:bg-blue-200 dark:selection:bg-blue-900/60 selection:text-blue-900 dark:selection:text-blue-100 antialiased relative overflow-hidden transition-colors duration-300">
@@ -145,6 +148,21 @@ export default function App() {
         </FadeIn>
 
         <div className="space-y-32">
+          <div id="prototypes" className="scroll-mt-32">
+            <FadeIn delay={100}>
+              <div className="text-center mb-10">
+                <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-[#1d1d1f] dark:text-white mb-4 transition-colors duration-300">
+                  UI/UX Design Systems & Figma Prototypes
+                </h3>
+                <p className="text-xl md:text-2xl text-[#86868b] dark:text-gray-400 font-medium transition-colors duration-300 max-w-4xl mx-auto">
+                  Reimagined interfaces and complete user flows designed in Figma, focusing on fresh visual identities and advanced interaction patterns.
+                </p>
+              </div>
+            </FadeIn>
+            
+            <AjeerPrototype onOpenSlider={() => setActiveProject('ajeer-figma')} />
+          </div>
+          
           <div id="design" className="scroll-mt-32">
             <FadeIn delay={100}>
               <div className="text-center mb-10">

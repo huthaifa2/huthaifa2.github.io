@@ -4,6 +4,7 @@ import FadeIn from '../FadeIn'
 import JustLookUp from './graphic/JustLookUp'
 import AnimatedPolarisLogo from './graphic/AnimatedPolarisLogo'
 import IndependenceDay from './graphic/IndependenceDay'
+import EidAlAdha from './graphic/EidAlAdha'
 import WorkersDay from './graphic/WorkersDay'
 import Internship from './graphic/Internship'
 
@@ -82,7 +83,7 @@ export default function GraphicDesignCard() {
       )}
 
       <div className="relative">
-        <div className={`space-y-8 overflow-hidden transition-all duration-700 ${expanded ? 'max-h-[5000px]' : 'max-h-[650px]'}`}>
+        <div className={`space-y-8 overflow-hidden transition-all duration-700 ${expanded ? 'max-h-[6000px]' : 'max-h-[650px]'}`}>
           <FadeIn delay={0}>
             <JustLookUp />
           </FadeIn>
@@ -93,9 +94,12 @@ export default function GraphicDesignCard() {
             <IndependenceDay onOpen={() => openModal(['/images/graphic/independence_day.png', '/images/graphic/independence_day_night.png'])} />
           </FadeIn>
           <FadeIn delay={300}>
-            <WorkersDay onOpen={() => openModal(['/images/graphic/workers_day.png'])} />
+            <EidAlAdha onOpen={() => openModal(['/images/graphic/eid_al_adha.png'])} />
           </FadeIn>
           <FadeIn delay={400}>
+            <WorkersDay onOpen={() => openModal(['/images/graphic/workers_day.png'])} />
+          </FadeIn>
+          <FadeIn delay={500}>
             <Internship onOpen={() => openModal(['/images/graphic/internship.png'])} />
           </FadeIn>
         </div>

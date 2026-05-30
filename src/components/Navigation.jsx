@@ -14,15 +14,14 @@ export default function Navigation({ onOpenContact }) {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex flex-col items-center mt-6 px-4">
-      {/* Increased to max-w-6xl to fit all the new tabs easily */}
       <nav className="flex items-center justify-between px-6 md:px-8 py-4 w-full max-w-6xl bg-white/70 dark:bg-[#24242c]/70 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative z-50 transition-colors duration-300">
         
-        {/* Added mr-8 (margin-right) so it physically cannot touch the tabs */}
         <div className="text-xl md:text-2xl font-semibold tracking-tight text-[#1d1d1f] dark:text-white pl-2 md:pl-0 shrink-0 mr-8 lg:mr-12">
           Huthaifa Ma'in
         </div>
 
         <div className="hidden md:flex space-x-4 lg:space-x-8 text-sm lg:text-base font-medium text-[#86868b] dark:text-gray-400 items-center">
+          <a href="#prototypes" className="hover:text-[#1d1d1f] dark:hover:text-white transition-colors duration-300 whitespace-nowrap">UI/UX</a>
           <a href="#design" className="hover:text-[#1d1d1f] dark:hover:text-white transition-colors duration-300 whitespace-nowrap">Graphic Design</a>
           <a href="#apps" className="hover:text-[#1d1d1f] dark:hover:text-white transition-colors duration-300 whitespace-nowrap">Flutter Apps</a>
           <a href="#tools" className="hover:text-[#1d1d1f] dark:hover:text-white transition-colors duration-300 whitespace-nowrap">Tools</a>
@@ -90,6 +89,7 @@ export default function Navigation({ onOpenContact }) {
       </nav>
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-20 w-[calc(100%-2rem)] max-w-sm bg-white/70 dark:bg-[#24242c]/70 backdrop-blur-2xl border border-gray-200/50 dark:border-white/10 rounded-3xl shadow-2xl py-6 px-6 flex flex-col space-y-5 text-center z-40 transition-colors duration-300">
+          <a href="#prototypes" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-[#86868b] dark:text-gray-400 hover:text-[#1d1d1f] dark:hover:text-white">UI/UX</a>
           <a href="#design" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-[#86868b] dark:text-gray-400 hover:text-[#1d1d1f] dark:hover:text-white">Graphic Design</a>
           <a href="#apps" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-[#86868b] dark:text-gray-400 hover:text-[#1d1d1f] dark:hover:text-white">Flutter Apps</a>
           <a href="#tools" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-[#86868b] dark:text-gray-400 hover:text-[#1d1d1f] dark:hover:text-white">Tools</a>
