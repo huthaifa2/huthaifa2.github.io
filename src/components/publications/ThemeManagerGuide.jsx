@@ -7,7 +7,6 @@ export default function ThemeManagerGuide() {
         
         <div className="w-full lg:w-3/5 p-6 md:p-12 flex flex-col items-start justify-center relative z-10">
           <div className="flex items-center gap-3 mb-4 md:mb-6">
-             {/* Pink Icon Container */}
              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
@@ -37,14 +36,13 @@ export default function ThemeManagerGuide() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#1d1d1f] dark:bg-white text-white dark:text-[#1d1d1f] px-6 py-3 rounded-full font-semibold text-sm hover:scale-105 transition-transform duration-300 shadow-md"
           >
-            Read Publication
+            Read Guide
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </a>
         </div>
 
-        {/* Pale Pink to Rose Gradient */}
         <div className="w-full lg:w-2/5 bg-gradient-to-br from-pink-50 to-rose-200/50 dark:from-[#32262b] dark:to-[#261e22] p-8 md:p-12 flex justify-center items-center relative transition-colors duration-500 min-h-[400px]">
           <div className="relative w-64 sm:w-72 md:w-80 lg:w-72 xl:w-80 aspect-[1/1.41] transform transition-all duration-500 ease-out z-10 group-hover:-translate-y-3 shadow-[0_20px_60px_rgba(0,0,0,0.1)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.15)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/10">
             <img 

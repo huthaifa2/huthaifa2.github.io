@@ -19,20 +19,20 @@ export default function Hero() {
       <FadeIn delay={200}>
         <div className="inline-block mb-6 md:mb-8 px-4 py-2 md:px-5 rounded-full bg-white/60 dark:bg-[#24242c]/90 border border-gray-200/50 dark:border-white/10 shadow-sm backdrop-blur-md transition-colors duration-500">
           <span className="text-sm md:text-base font-medium text-[#86868b] dark:text-gray-300 tracking-wide transition-colors duration-500">
-            Graphic Designer · UI/UX Designer · Flutter Developer
+            UI/UX Designer · Graphic Designer · Motion Designer
           </span>
         </div>
       </FadeIn>
       
       <FadeIn delay={300}>
         <h1 className="text-5xl md:text-[5.5rem] leading-tight font-bold tracking-tight mb-6 md:mb-8 text-[#1d1d1f] dark:text-white transition-colors duration-500">
-          Graphic Designer, UI/UX Designer <br className="hidden md:block" /> & Flutter Developer.
+          UI/UX, Graphic <br className="hidden md:block" /> & Motion Designer.
         </h1>
       </FadeIn>
       
       <FadeIn delay={400}>
         <p className="text-lg md:text-3xl text-[#86868b] dark:text-gray-400 max-w-4xl leading-relaxed font-medium transition-colors duration-500">
-          I produce compelling visual narratives and motion graphics using Adobe After Effects, Illustrator, Photoshop, and Premiere Pro. I also design intuitive UI/UX systems in Figma, and bring them to life as high-performance iOS and Android apps using Flutter.
+          I produce compelling visual narratives and motion graphics using Adobe After Effects, Illustrator, Photoshop, and Premiere Pro. I also design intuitive UI/UX systems in Figma to create seamless digital experiences.
         </p>
       </FadeIn>
     </main>

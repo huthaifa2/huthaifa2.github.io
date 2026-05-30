@@ -1,4 +1,4 @@
-import FadeIn from '../FadeIn'
+import FadeIn from '../../FadeIn'
 
 export default function AjeerPrototype({ onOpenSlider }) {
   return (
@@ -15,7 +15,7 @@ export default function AjeerPrototype({ onOpenSlider }) {
           
           <p className="text-[#1d1d1f] dark:text-gray-300 text-sm md:text-lg opacity-90 leading-relaxed font-bold transition-colors duration-500">
             Reimagining the entire booking flow of the Ajeer app from scratch in Figma. My goal was to create a fresh visual identity with enhanced interaction patterns and features for an intuitive, complete experience from start to finish. The design follows a modern colorful-minimal direction, with soft gradients, frosted glass surfaces, and liquid glass effects. I focused on features such as a persistent booking summary, discount-aware service cards, a clock-based time picker, detailed provider cards, editable review screens, and graceful empty states. 16 screens, 6-step flow. Built with care in Figma.
-            See more on Dribbble: <a href="https://lnkd.in/dgVfHgHe" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-semibold hover:underline">Dribbble</a>
+            See more on Behance: <a href="https://www.behance.net/gallery/250245373/Ajeer-Home-Services-App-UIUX-Redesign" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-semibold hover:underline">Behance</a>
           </p>
         </div>
         

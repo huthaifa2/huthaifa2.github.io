@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { createPortal } from 'react-dom'
-import FadeIn from '../FadeIn'
-import JustLookUp from './graphic/JustLookUp'
-import AnimatedPolarisLogo from './graphic/AnimatedPolarisLogo'
-import IndependenceDay from './graphic/IndependenceDay'
-import EidAlAdha from './graphic/EidAlAdha'
-import WorkersDay from './graphic/WorkersDay'
-import Internship from './graphic/Internship'
+import FadeIn from '../../FadeIn'
+import JustLookUp from './JustLookUp'
+import AnimatedPolarisLogo from './AnimatedPolarisLogo'
+import IndependenceDay from './IndependenceDay'
+import EidAlAdha from './EidAlAdha'
+import WorkersDay from './WorkersDay'
+import Internship from './Internship'
 
 export default function GraphicDesignCard() {
   const [expanded, setExpanded] = useState(false)
@@ -36,15 +36,15 @@ export default function GraphicDesignCard() {
     <>
       {modalImages && createPortal(
         <div
-          className="fixed inset-0 z-[200] flex items-center justify-center backdrop-blur-2xl"
+          className="fixed inset-0 z-[200] flex items-center justify-center backdrop-blur-2xl bg-white/20 dark:bg-black/20"
           onClick={closeModal}
         >
           <button
             onClick={closeModal}
-            className="absolute top-8 right-8 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors p-2 z-10"
+            className="absolute top-6 right-6 md:top-8 md:right-8 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors p-2 z-10"
             aria-label="Close"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8 md:w-10 md:h-10">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -53,24 +53,24 @@ export default function GraphicDesignCard() {
             <>
               <button
                 onClick={handlePrev}
-                className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors p-2 z-10"
+                className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors p-2 md:p-4 z-10"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8 md:w-12 md:h-12">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
               </button>
               <button
                 onClick={handleNext}
-                className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors p-2 z-10"
+                className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors p-2 md:p-4 z-10"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8 md:w-12 md:h-12">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
               </button>
             </>
           )}
 
-          <div className="w-[85%] max-w-4xl h-[85vh] flex items-center justify-center relative">
+          <div className="w-[75%] md:w-[85%] max-w-4xl h-[85vh] flex items-center justify-center relative">
             <img
               src={modalImages[currentImageIndex]}
               alt="Preview"
@@ -82,8 +82,8 @@ export default function GraphicDesignCard() {
         document.body
       )}
 
-      <div className="relative">
-        <div className={`space-y-8 overflow-hidden transition-all duration-700 ${expanded ? 'max-h-[6000px]' : 'max-h-[650px]'}`}>
+      <div className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden">
+        <div className={`space-y-8 overflow-hidden transition-all duration-1000 ease-in-out ${expanded ? 'max-h-[6000px]' : 'max-h-[650px]'}`}>
           <FadeIn delay={0}>
             <JustLookUp />
           </FadeIn>
@@ -105,13 +105,21 @@ export default function GraphicDesignCard() {
         </div>
 
         {!expanded && (
-          <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-[#f5f5f7] dark:from-[#13131A] to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-72 rounded-b-[2rem] md:rounded-b-[3rem] overflow-hidden pointer-events-none z-10">
+            <div
+              className="w-full h-full bg-white/40 dark:bg-[#13131A]/60 backdrop-blur-2xl transition-colors duration-300"
+              style={{
+                maskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
+                WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)'
+              }}
+            />
+          </div>
         )}
 
-        <div className="flex justify-center mt-6 relative z-10">
+        <div className={`flex justify-center z-20 transition-all duration-500 ${expanded ? 'mt-8 pb-8' : 'absolute bottom-8 left-0 right-0'}`}>
           <button
             onClick={() => setExpanded(!expanded)}
-            className="flex items-center gap-2 px-6 py-3 bg-white/80 dark:bg-[#24242c]/90 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-full shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-[#1d1d1f] dark:text-white font-semibold text-sm"
+            className="flex items-center gap-2 px-6 py-3 bg-white/90 dark:bg-[#24242c]/95 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-[#1d1d1f] dark:text-white font-semibold text-sm"
           >
             {expanded ? (
               <>

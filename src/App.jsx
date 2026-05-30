@@ -2,99 +2,15 @@ import { useState } from 'react'
 import FadeIn from './components/FadeIn'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
-import GraphicDesignCard from './components/projects/GraphicDesignCard'
-import AjeerProject from './components/projects/AjeerProject'
-import PolarisProject from './components/projects/PolarisProject'
-import AjeerPrototype from './components/prototypes/AjeerPrototype'
+import GraphicDesignCard from './components/projects/graphic/GraphicDesignCard'
+import AppCard from './components/projects/apps/AppCard'
+import PrototypeCard from './components/projects/prototypes/PrototypeCard'
+import GuideCard from './components/publications/GuideCard'
 import Tools from './components/tools/Tools'
 import Skills from './components/skills/Skills'
 import ContactFooter from './components/contact/ContactFooter'
 import ContactModal from './components/contact/ContactModal'
 import ImageSlider from './components/ImageSlider'
-import FlutterApiGuide from './components/publications/FlutterApiGuide'
-import ThemeManagerGuide from './components/publications/ThemeManagerGuide'
-import CleanArchitectureGuide from './components/publications/CleanArchitectureGuide'
-
-function GuidesList() {
-  const [expanded, setExpanded] = useState(false)
-
-  return (
-    <div className="relative">
-      <div className={`space-y-16 overflow-hidden transition-all duration-700 ${expanded ? 'max-h-[2000px]' : 'max-h-[700px]'}`}>
-        <FlutterApiGuide />
-        <CleanArchitectureGuide />
-        <ThemeManagerGuide />
-      </div>
-
-      {!expanded && (
-        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#f5f5f7] dark:from-[#13131A] to-transparent pointer-events-none" />
-      )}
-
-      <div className="flex justify-center mt-6 relative z-10">
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className="flex items-center gap-2 px-6 py-3 bg-white/80 dark:bg-[#24242c]/90 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-full shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-[#1d1d1f] dark:text-white font-semibold text-sm"
-        >
-          {expanded ? (
-            <>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-              </svg>
-              Show Less
-            </>
-          ) : (
-            <>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-              </svg>
-              See All Guides
-            </>
-          )}
-        </button>
-      </div>
-    </div>
-  )
-}
-
-function AppsList({ onOpenAjeer, onOpenPolaris }) {
-  const [expanded, setExpanded] = useState(false)
-
-  return (
-    <div className="relative">
-      <div className={`space-y-24 overflow-hidden transition-all duration-700 ${expanded ? 'max-h-[5000px]' : 'max-h-[650px]'}`}>
-        <AjeerProject onOpenSlider={onOpenAjeer} />
-        <PolarisProject onOpenSlider={onOpenPolaris} />
-      </div>
-
-      {!expanded && (
-        <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-[#f5f5f7] dark:from-[#13131A] to-transparent pointer-events-none" />
-      )}
-
-      <div className="flex justify-center mt-6 relative z-10">
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className="flex items-center gap-2 px-6 py-3 bg-white/80 dark:bg-[#24242c]/90 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-full shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-[#1d1d1f] dark:text-white font-semibold text-sm"
-        >
-          {expanded ? (
-            <>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-              </svg>
-              Show Less
-            </>
-          ) : (
-            <>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-              </svg>
-              See All Apps
-            </>
-          )}
-        </button>
-      </div>
-    </div>
-  )
-}
 
 export default function App() {
   const [activeProject, setActiveProject] = useState(null)
@@ -142,7 +58,7 @@ export default function App() {
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-[#1d1d1f] dark:text-white mb-6 transition-colors duration-300">Selected Works.</h2>
             <p className="text-xl md:text-2xl text-[#86868b] dark:text-gray-400 font-medium transition-colors duration-300 max-w-4xl mx-auto">
-              Design work and production apps I've crafted from UI/UX systems and motion graphics to software architecture and backend integration.
+              A curated collection of my creative work, ranging from intuitive UI/UX systems and interactive prototypes to compelling brand identities and motion graphics.
             </p>
           </div>
         </FadeIn>
@@ -160,7 +76,7 @@ export default function App() {
               </div>
             </FadeIn>
             
-            <AjeerPrototype onOpenSlider={() => setActiveProject('ajeer-figma')} />
+            <PrototypeCard onOpenFigma={() => setActiveProject('ajeer-figma')} />
           </div>
           
           <div id="design" className="scroll-mt-32">
@@ -188,7 +104,7 @@ export default function App() {
                 </p>
               </div>
             </FadeIn>
-            <AppsList 
+            <AppCard 
               onOpenAjeer={() => setActiveProject('ajeer')}
               onOpenPolaris={() => setActiveProject('polaris')}
             />
@@ -206,7 +122,7 @@ export default function App() {
           </div>
         </FadeIn>
 
-        <GuidesList />
+        <GuideCard />
       </section>
 
       <Tools />
