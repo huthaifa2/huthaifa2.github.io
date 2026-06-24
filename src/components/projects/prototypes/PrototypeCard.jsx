@@ -3,21 +3,24 @@ import FadeIn from '../../FadeIn'
 import PortfolioPrototype from './PortfolioPrototype'
 import FigmaShowcase from './FigmaShowcase'
 import AjeerPrototype from './AjeerPrototype'
+import MacOSPrototype from './MacOSPrototype'
 
 export default function PrototypeCard({ onOpenFigma }) {
   const [expanded, setExpanded] = useState(false)
 
   return (
     <div className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden">
-      {/* Adjusted the collapsed max-h values here to cut off the white text area */}
       <div className={`space-y-8 overflow-hidden transition-all duration-1000 ease-in-out ${expanded ? 'max-h-[5000px]' : 'max-h-[250px] md:max-h-[450px] lg:max-h-[550px]'}`}>
         <FadeIn delay={0}>
-          <PortfolioPrototype />
+          <MacOSPrototype />
         </FadeIn>
         <FadeIn delay={100}>
-          <FigmaShowcase />
+          <PortfolioPrototype />
         </FadeIn>
         <FadeIn delay={200}>
+          <FigmaShowcase />
+        </FadeIn>
+        <FadeIn delay={300}>
           <AjeerPrototype onOpenSlider={onOpenFigma} />
         </FadeIn>
       </div>
