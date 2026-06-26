@@ -52,12 +52,12 @@ export default function MacOSPrototype() {
             </div>
 
             <a
-              href="https://www.behance.net/huthaifamain/info"
+              href="https://www.behance.net/huthaifamain/projects"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-[#1d1d1f] dark:bg-white text-white dark:text-[#1d1d1f] px-6 py-3 rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1 font-semibold text-sm shrink-0"
             >
-              Check it out on Behance
+              See More on Behance
             </a>
           </div>
 
